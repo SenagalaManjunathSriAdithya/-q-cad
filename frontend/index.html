@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Q-CAD | Cyber Anomaly Detection</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+
+        <header>
+            <div class="logo">Q-CAD</div>
+
+            <div>
+                <h1>Quantum-Classical Cyber Anomaly Detection</h1>
+                <p>Hybrid AI system for network traffic analysis</p>
+            </div>
+        </header>
+
+
+        <main>
+
+            <!-- INPUT SECTION -->
+
+            <section class="card">
+
+                <h2>Network Traffic Analysis</h2>
+
+                <p class="description">
+                    Enter network traffic parameters to analyze the behavior.
+                </p>
+
+
+                <div class="input-grid">
+
+                    <div class="input-group">
+                        <label for="src_bytes">
+                            Source Bytes
+                        </label>
+
+                        <input
+                            type="number"
+                            id="src_bytes"
+                            placeholder="Example: 100"
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="dst_bytes">
+                            Destination Bytes
+                        </label>
+
+                        <input
+                            type="number"
+                            id="dst_bytes"
+                            placeholder="Example: 200"
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="count">
+                            Connection Count
+                        </label>
+
+                        <input
+                            type="number"
+                            id="count"
+                            placeholder="Example: 10"
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="dst_host_srv_count">
+                            Host Service Count
+                        </label>
+
+                        <input
+                            type="number"
+                            id="dst_host_srv_count"
+                            placeholder="Example: 5"
+                        >
+                    </div>
+
+                </div>
+
+
+                <button id="analyzeButton">
+                    ANALYZE TRAFFIC
+                </button>
+
+            </section>
+
+
+            <!-- RESULT SECTION -->
+
+            <section class="card result-card">
+
+                <h2>Detection Result</h2>
+
+
+                <div id="result">
+
+                    <div class="status waiting">
+                        WAITING FOR ANALYSIS
+                    </div>
+
+                    <p>
+                        Enter network traffic values and click
+                        <strong>Analyze Traffic</strong>.
+                    </p>
+
+                </div>
+
+
+                <!-- HYBRID RISK -->
+
+                <div class="risk-section">
+
+                    <div class="risk-header">
+                        <span>Hybrid Risk Score</span>
+
+                        <strong id="hybridRisk">
+                            --
+                        </strong>
+                    </div>
+
+                    <div class="progress-container">
+
+                        <div
+                            id="hybridProgress"
+                            class="progress-bar"
+                            style="width: 0%"
+                        >
+                        </div>
+
+                    </div>
+
+                    <div class="threshold-text">
+                        Detection threshold:
+                        <strong id="thresholdValue">45%</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- MODEL COMPARISON -->
+
+                <div class="model-section">
+
+                    <h3>Model Comparison</h3>
+
+
+                    <div class="model-row">
+
+                        <div class="model-label">
+                            <span>Classical ML</span>
+
+                            <strong id="classicalProbability">
+                                --
+                            </strong>
+                        </div>
+
+                        <div class="model-progress">
+
+                            <div
+                                id="classicalProgress"
+                                class="model-bar"
+                                style="width: 0%"
+                            >
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="model-row">
+
+                        <div class="model-label">
+                            <span>Quantum ML</span>
+
+                            <strong id="quantumProbability">
+                                --
+                            </strong>
+                        </div>
+
+                        <div class="model-progress">
+
+                            <div
+                                id="quantumProgress"
+                                class="model-bar"
+                                style="width: 0%"
+                            >
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="model-row">
+
+                        <div class="model-label">
+                            <span>Hybrid Model</span>
+
+                            <strong id="hybridProbability">
+                                --
+                            </strong>
+                        </div>
+
+                        <div class="model-progress">
+
+                            <div
+                                id="hybridProgressModel"
+                                class="model-bar"
+                                style="width: 0%"
+                            >
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANALYSIS INFORMATION -->
+
+                <div class="analysis-info">
+
+                    <div>
+                        <span>Detection Method</span>
+                        <strong>Hybrid ML + QML</strong>
+                    </div>
+
+                    <div>
+                        <span>Decision Threshold</span>
+                        <strong id="thresholdInfo">45%</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                Q-CAD • Quantum-Classical Cyber Anomaly Detection
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
